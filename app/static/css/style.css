@@ -1,0 +1,175 @@
+.bg {
+    min-height:100vh; 
+    background: linear-gradient(45deg, rgba(0,0,0,1), rgba(0,0,0,0.5)), url("https://images.unsplash.com/photo-1548048211-357ddb2c920f?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387");
+    background-size:cover;
+    background-position: 50%, 50%;
+    background-repeat: no-repeat;
+}
+
+.mush_logo {
+    width: 2rem;
+}
+
+.big {
+    font-size: 3rem;
+}
+
+.small {
+    font-size  : 0.8rem;
+}
+
+.separator_up {
+    position:absolute;
+    image-orientation: flip;
+    transform:scaleX(-1) rotate(180deg);
+    /* transform:rotate(180deg); */
+    top:0px;
+    z-index : -1;
+}
+
+.separator_down {
+    transform:scaleX(-1);
+}
+
+.footer_text {
+   position:absolute;
+   width:100%;
+   top:50%;
+   z-index:1;
+}
+
+.bg_glass {
+    background-color: rgba(240, 255, 255, 0.2);
+}
+
+.light_grey {
+    background-color:black;
+}
+
+.a_item {
+    text-decoration: none;
+    color:cyan;
+    transition: color 0.5s;
+}
+.a_item:hover {
+    color:orange;
+}
+
+.pastille{
+    width:5rem;
+    height:5rem;
+    pointer-events: none;
+}
+
+.min-h {
+    min-height:4rem;
+}
+
+#design {
+    width:100%;
+    height:70vh;
+    border : 1px dashed goldenrod;
+}
+
+.btn_create {
+text-decoration:none;
+}
+.btn_create:hover {
+    color:gold!important;
+}
+.wait {
+    height:30rem;
+    width:40rem;
+    background-color: rgba(15, 10, 19, 0.877);
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -60%);
+    position:fixed;
+    z-index: 10000;
+}
+
+.pop_up {
+    background: rgba(255, 255, 255, 0.95);
+    width:fit-content;
+    height:fit-content;
+    border-radius:1rem;
+    position:absolute;  
+    transform: translate(-50%, -50%);
+    z-index:0;
+
+}
+.min_w {
+    min-width: 8rem;
+}
+
+.border_dashed {
+    border-style: dashed!important;
+}
+
+table {
+    background-color: white;
+    color: #333;
+    text-align: center;
+    border-collapse: collapse;
+    overflow: hidden;
+    width: 100%;
+}
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: #bbb;
+}
+
+table tr:hover {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.graph {
+    width:15rem;
+}
+.home_btn{
+    min-width:10rem;
+
+    transition: background border-color 0.5s;
+}
+.home_btn:hover{
+    background: orange;
+    border-color:orange;
+}
+
+.answer {
+    width:25rem;
+    height:25rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    opacity: 95%;
+}
+
+.cross {
+    color: brown;
+    }
+
+.diag {
+    position:absolute;
+    top: 50%;
+    left:50%; 
+    transform: translate(-50%, -50%);
+}
+
+.very-big {
+    font-size:8rem;
+    text-shadow: #333 1px 1px 5px;
+}

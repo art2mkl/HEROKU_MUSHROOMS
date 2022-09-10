@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/baguidou/Desktop/IA/102_projet_oeuvre/HEROKU_DEPLOY/mlruns/0/4acf59fdaf3b43b2aa6afbcb419ad6e2/artifacts
+end_time: 1662822335982
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 4acf59fdaf3b43b2aa6afbcb419ad6e2
+run_uuid: 4acf59fdaf3b43b2aa6afbcb419ad6e2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1662822335614
+status: 3
+tags: []
+user_id: baguidou
