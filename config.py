@@ -1,9 +1,12 @@
 import os
 from dotenv import load_dotenv
 #Load ENV variables
-load_dotenv('.flaskenv')
+load_dotenv('.env')
+import urllib.parse
+
 
 APPLICATION_DIR = os.path.dirname(os.path.realpath(__file__))
+params = urllib.parse.quote_plus(os.environ.get('DB_STRING'))
 
 class Config(object):
 
@@ -11,25 +14,25 @@ class Config(object):
 
 class DevelopmentConfig(Config):
     DEBUG = True   
-    # Chemin SQL Alchemy
-    #SQLALCHEMY_DATABASE_URI = f"sqlite:///{APPLICATION_DIR}/mushrooms.sqlite"
-    #SQLALCHEMY_DATABASE_URI = "postgresql://postgres:secretpassword@localhost:5432/blob.db"
-    SQLALCHEMY_DATABASE_URI = f"postgresql://{os.environ.get('DB_USER')}:{os.environ.get('DB_PWD')}@{os.environ.get('DB_HOST')}:{os.environ.get('DB_PORT')}/{os.environ.get('DB_NAME')}"
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DB_STRING')
       
-   
-
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 # Create the testing config
 class TestingConfig(Config):
     DEBUG = False
     TESTING = True
-    #SQLALCHEMY_DATABASE_URI = f"postgresql://{os.environ.get('DB_USER')}:{os.environ.get('DB_PWD')}@{os.environ.get('DB_HOST')}:{os.environ.get('DB_PORT')}/ {os.environ.get('DB_NAME')}"
-    SQLALCHEMY_DATABASE_URI = f"postgresql://{os.environ.get('DB_USER')}:{os.environ.get('DB_PWD')}@{os.environ.get('DB_HOST')}:{os.environ.get('DB_PORT')}/{os.environ.get('DB_NAME')}"
+
+    print(os.environ.get('DB_PWD'))
+
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DB_STRING')
+
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 # Create the prod config
 class ProdConfig(Config):
     DEBUG = False
-    SQLALCHEMY_DATABASE_URI = f"postgresql://{os.environ.get('DB_USER')}:{os.environ.get('DB_PWD')}@{os.environ.get('DB_HOST')}:{os.environ.get('DB_PORT')}/{os.environ.get('DB_NAME')}"
+
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DB_STRING')
+    
     SQLALCHEMY_TRACK_MODIFICATIONS = False
