@@ -228,8 +228,9 @@ class Mushroom_ml():
             accuracy,
             precision,
             path,
-            display) 
-            VALUES (%s,%s,%s,%s,%s,%s,%s,%s)
+            display,
+            user_id) 
+            VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)
             ;""", (
                 f"{str(sendmodel)[:40]}_{int(time.time())}",
                 ("||").join(self.X.columns),
@@ -238,7 +239,8 @@ class Mushroom_ml():
                 float(accuracy),
                 float(precision),
                 ml_path,
-                display_bol         
+                display_bol,
+                1        
             ))
 
         self.save_model(sendmodel, encoder, ml_path)

@@ -23,8 +23,6 @@ class TestingConfig(Config):
     DEBUG = False
     TESTING = True
 
-    print(os.environ.get('DB_PWD'))
-
     SQLALCHEMY_DATABASE_URI = os.environ.get('DB_STRING')
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False

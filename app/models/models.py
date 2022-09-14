@@ -30,6 +30,8 @@ class User(db.Model):
     name = db.Column(db.String(64))
     
     created_timestamp = db.Column(db.DateTime, default=datetime.datetime.now)
+
+    mls = db.relationship('Ml', backref='user', lazy='dynamic')
     
     # projects = db.relationship('Project', backref='user', lazy='dynamic')
     
@@ -77,6 +79,7 @@ class User(db.Model):
         else:
             return False
 
+
  
 #-------------------Model DATA-------------------
 class Data(db.Model):
@@ -117,5 +120,6 @@ class Ml(db.Model):
     precision = db.Column(db.Float())
     path = db.Column(db.String())
     display = db.Column(db.Boolean(), default=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
 
