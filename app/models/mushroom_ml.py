@@ -285,7 +285,7 @@ class Mushroom_ml():
         X_train, X_test, y_train, y_test = self.train_test_split(self.X, self.y)
 
         #define model and encode
-        sendmodel=DecisionTreeClassifier()
+        sendmodel=RandomForestClassifier()
         
         cat = X_train.select_dtypes(exclude = [np.number]).columns
         transformer = make_column_transformer((encoder, cat))
