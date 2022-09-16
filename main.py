@@ -2,9 +2,9 @@
 from app import create_app
 
 # import the application config classes
-from config import DevelopmentConfig
+from config import DevelopmentConfig, ProdConfig, TestingConfig
 
-app = create_app(DevelopmentConfig)
+app = create_app()
 
 #Launch app
 if __name__ == '__main__':

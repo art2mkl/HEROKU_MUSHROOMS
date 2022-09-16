@@ -19,7 +19,7 @@ Go to PREDICTION page
     None
 
     Returns :
-    redirection to login if no session or basic ml if session
+    redirection to login if no session or prediction page if session
 
    -------------------------------------------------------------------------------------"""
 

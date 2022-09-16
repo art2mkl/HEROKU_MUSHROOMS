@@ -14,23 +14,18 @@ class Config(object):
 
 class DevelopmentConfig(Config):
     DEBUG = True   
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DB_STRING')
-      
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DB_STRING')    
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 # Create the testing config
 class TestingConfig(Config):
     DEBUG = False
     TESTING = True
-
     SQLALCHEMY_DATABASE_URI = os.environ.get('DB_STRING')
-
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 # Create the prod config
 class ProdConfig(Config):
     DEBUG = False
-
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DB_STRING')
-    
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DB_STRING')    
     SQLALCHEMY_TRACK_MODIFICATIONS = False
