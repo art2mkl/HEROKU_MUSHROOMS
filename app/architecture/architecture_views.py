@@ -1,19 +1,19 @@
 from flask import render_template, redirect, url_for, flash, session
 
 # import the basic blue print instance
-from app.basic import basic
+from app.architecture import architecture
 
 
-@basic.route('/')
-def basic_view():
+@architecture.route('/')
+def architecture_view():
     """-------------------------------------------------------------------------------------
-Go to Basic ML page
+Go to architecture ML page
 
     Parameters :
     None
 
     Returns :
-    redirection to login if no session or basic ml if session
+    redirection to login if no session or architecture ml if session
 
    -------------------------------------------------------------------------------------"""
 
@@ -24,5 +24,5 @@ Go to Basic ML page
 
         
         return render_template(
-            'basic/basic.html'
+            'architecture/architecture.html'
             ) 

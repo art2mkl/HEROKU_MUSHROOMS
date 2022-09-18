@@ -41,5 +41,9 @@ def create_app(config=DevelopmentConfig, admin=admin):
     from app.prediction import prediction as prediction_bp
     app.register_blueprint(prediction_bp, url_prefix='/prediction')
 
+    # register blueprints of applications
+    from app.architecture import architecture as architecture_bp
+    app.register_blueprint(architecture_bp, url_prefix='/architecture')
+
    
     return app

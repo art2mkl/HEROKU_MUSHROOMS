@@ -173,3 +173,8 @@ table th {
     font-size:8rem;
     text-shadow: #333 1px 1px 5px;
 }
+
+.table_logo {
+    width:7rem;
+    object-fit: cover;
+}

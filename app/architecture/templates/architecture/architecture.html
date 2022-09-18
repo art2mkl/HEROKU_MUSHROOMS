@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+{% block content_title %}<i cla<i class="bi bi-bounding-box"></i>&nbsp;Architecture{% endblock %}
+
+{% block under_content %}
+
+<div class="mt-2">
+    <h3 class="text-info">Architecture schema</h3>
+    
+    <div class="d-flex justify-content-center align-items-center">
+        <img class = "w-100 h-auto bg-white p-1 rounded shadow" src="{{ url_for('static', filename='images/Architecture.png') }}" alt="Architecture">
+    </div>
+</div>
+
+<div>
+    <hr>
+    <h5 class="text-warning">COMMENTS :
+        <span class="text-light">
+            <ul>
+                <li>Cleaning and the Modeling were done upstream on jupyter notebook in order to feed a database hosted on an external server listing the access path of the created models.</li> 
+                <li>User connects to the webapp hosted on a server to enter his mushroom identification criteria and choose a prediction model.</li>
+                <li>Application connects to the database to retrieve and load the model and performs the user's prediction.</li>
+                <li>Application is deployed in a continuous way, the whole code being centralized on a GITHUB repository.</li>
+            </ul>
+        </span>
+    </h5>
+    <hr>
+</div>
+
+<div class="mt-2">
+
+    <h3 class="text-info">Technologies</h3>
+
+    <table>
+        <thead>
+          <tr>
+            <th scope="col" class="text-center">ITEM</th>
+            <th scope="col" class="text-center">URL</th>
+            <th scope="col" class="text-center">LOGO</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>MAIN LANGUAGE</td>
+            <td><a href="https://www.python.org/">PYTHON 3.9</a></td>
+            <td><img class = "table_logo" src="{{ url_for('static', filename='images/logos/01_python.png') }}" alt="logo python"></td>
+          </tr>
+
+          <tr>
+            <td>ML DEVELOPMENT</td>
+            <td><a href="https://jupyter.org/">JUPYTER NOTEBOOK</a></td>
+            <td><img class = "table_logo" src="{{ url_for('static', filename='images/logos/02_jupyter_notebook.png') }}" alt="logo python"></td>
+          </tr>
+       
+          <tr>
+            <td>FRAMEWORK APP</td>
+            <td><a href="https://flask.palletsprojects.com/en/2.1.x/">FLASK 2.1</a></td>
+            <td><img class = "table_logo" src="{{ url_for('static', filename='images/logos/03_flask.png') }}" alt="logo jupyter notebook"></td>
+          </tr>
+
+          <tr>
+            <td>ORM</td>
+            <td><a href="https://flask-sqlalchemy.palletsprojects.com/en/2.x/">FLASK_SQLALCHEMY 2.0</a></td>
+            <td><img class = "table_logo" src="{{ url_for('static', filename='images/logos/04_flask_sqlalchemy.png') }}" alt="logo flask sqlalchemy"></td>
+          </tr>
+
+          <tr>
+            <td>FORMS</td>
+            <td><a href="https://flask-wtf.readthedocs.io/en/1.0.x/">FLASK_WTF 1.0</a></td>
+            <td><img class = "table_logo" src="{{ url_for('static', filename='images/logos/05_flask_WTF.png') }}" alt="logo flask wtf"></td>
+          </tr>
+          
+          <tr>
+            <td>MONITORING</td>
+            <td><a href="https://www.mlflow.org/docs/latest/python_api/index.html">MLFLOW 1.28</a></td>
+            <td><img class = "table_logo" src="{{ url_for('static', filename='images/logos/06_mlflow.png') }}" alt="logo mlflow"></td>
+          </tr>
+
+          <tr>
+            <td>TESTS</td>
+            <td><a href="https://pytest-flask.readthedocs.io/en/latest/">FLASK PYTEST 1.0.1</a></td>
+            <td><img class = "table_logo" src="{{ url_for('static', filename='images/logos/07_pytest.png') }}" alt="logo pytest"></td>
+          </tr>
+
+          <tr>
+            <td>DATABASE</td>
+            <td><a href="https://www.postgresql.org/">POSTGRESQL 15</a></td>
+            <td><img class = "table_logo" src="{{ url_for('static', filename='images/logos/08_postgreSQL.png') }}" alt="logo postgreSQL"></td>
+          </tr>
+         
+          <tr>
+            <td>RENDER TEMPLATE</td>
+            <td><a href="https://jinja.palletsprojects.com/en/3.1.x/">JINJA 3.1</a></td>
+            <td><img class = "table_logo" src="{{ url_for('static', filename='images/logos/09_jinja.png') }}" alt="logo jinja"></td>
+          </tr>
+         
+          <tr>
+            <td>FRONTEND MOTEUR HTML </td>
+            <td><a href="https://developer.mozilla.org/fr/docs/Web/HTML/">HTML 5</a></td>
+            <td><img class = "table_logo" src="{{ url_for('static', filename='images/logos/10_html5.png') }}" alt="logo html5"></td>
+          </tr>
+         
+          <tr>
+            <td>FRONTEND MOTEUR CSS </td>
+            <td><a href="https://developer.mozilla.org/fr/docs/Web/CSS/">CSS 3</a></td>
+            <td><img class = "table_logo" src="{{ url_for('static', filename='images/logos/11_css3.png') }}" alt="logo css3"></td>
+          </tr>
+         
+          <tr>
+            <td>FRONTEND FRAMEWORK </td>
+            <td><a href="https://getbootstrap.com/">BOOTSTRAP 5.0</a></td>
+            <td><img class = "table_logo" src="{{ url_for('static', filename='images/logos/12_bootstrap.png') }}" alt="logo bootstrap"></td>
+          </tr>
+         
+          <tr>
+            <td>FRONTEND SCRIPTS LANGUAGE </td>
+            <td><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/">JAVASCRIPT 13</a></td>
+            <td><img class = "table_logo" src="{{ url_for('static', filename='images/logos/13_js.png') }}" alt="logo js"></td>
+          </tr>
+         
+          <tr>
+            <td>VERSIONING AND CLOUD REPOSITORY INTERFACE</td>
+            <td><a href="https://github.com/">GITHUB 2022</a></td>
+            <td><img class = "table_logo" src="{{ url_for('static', filename='images/logos/14_github.png') }}" alt="logo github"></td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+</div>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
