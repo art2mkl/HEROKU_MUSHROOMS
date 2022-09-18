@@ -50,37 +50,37 @@ Go to Home page
         return render_template('main/index.html')   
 
 
-@main.route('/init_db/')
-def init_db():
-    """-------------------------------------------------------------------------------------
-init db, drop all tables and init tables
+# @main.route('/init_db/')
+# def init_db():
+#     """-------------------------------------------------------------------------------------
+# init db, drop all tables and init tables
 
-    Parameters :
-    None
+#     Parameters :
+#     None
 
-    Returns :
-    redirection to route home
+#     Returns :
+#     redirection to route home
 
-   -------------------------------------------------------------------------------------"""
-    #Load ENV variables
-    load_dotenv('.env')
+#    -------------------------------------------------------------------------------------"""
+#     #Load ENV variables
+#     load_dotenv('.env')
 
-    #drop all tables and recreate
-    db.drop_all()
-    db.create_all()
+#     #drop all tables and recreate
+#     db.drop_all()
+#     db.create_all()
 
-    # #add 1 user
-    db.session.add(User(email=os.getenv('USER_MAIL'), password=os.getenv('USER_PASSWORD'), name=os.getenv('USER_NAME')))
-    db.session.commit()
+#     # #add 1 user
+#     db.session.add(User(email=os.getenv('USER_MAIL'), password=os.getenv('USER_PASSWORD'), name=os.getenv('USER_NAME')))
+#     db.session.commit()
 
-    #load .csv on data
-    load_csv()
+#     #load .csv on data
+#     load_csv()
 
-    #del models folders
-    del_folder('app/models/load_models')  
+#     #del models folders
+#     del_folder('app/models/load_models')  
 
-    flash("Database is initialized successfully", "success")
-    return redirect(url_for('main.home'))
+#     flash("Database is initialized successfully", "success")
+#     return redirect(url_for('main.home'))
 
 
 @main.route('/test')
